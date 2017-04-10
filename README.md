@@ -17,8 +17,8 @@ b. Vertices of the entire 'shortest path' from source to destination
 c. If there are multiple paths with the same weighted shortest path length choose the one with the minimum number of hops
 d. Use FFFF to indicate the end of a set of input and 0 to represent the end of all inputs.
 
-## Example of Graph.dat, Input.dat and Output.dat
-Graph.dat format
+# Example of Graph.dat, Input.dat and Output.dat
+## Graph.dat format
 
 6
 
@@ -43,7 +43,7 @@ The second row indicates the following distances from node 1
 ~ The distance between node 1 and node 5 is 10 0 (i.e. no direct link)
 And so on.
 
-Input.dat format
+## Input.dat format
 1
 
 3
@@ -84,7 +84,7 @@ FF
 
 The pairs of nodes that are to be calculated are (1, 3), (1, 4), (1,5), (1, 6), (2, 6) and (3, 6).
 
-Output.dat format
+## Output.dat format
 3.0
 
 1.0
