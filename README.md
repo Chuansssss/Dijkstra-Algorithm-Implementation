@@ -20,12 +20,19 @@ d. Use FFFF to indicate the end of a set of input and 0 to represent the end of 
 ## Example of Graph.dat, Input.dat and Output.dat
 Graph.dat format
 6
+
 102235415060
+
 122033425060
+
 152330435165
+
 112233405160
+
 102031415062
+
 102035405260
+
 The first row indicate the number of vertices (nodes)
 The second row indicates the following distances from node 1
 ~ The distance between node 1 and itself is 0
@@ -37,59 +44,111 @@ And so on.
 
 Input.dat format
 1
+
 3
+
 FF
+
 1
+
 4
+
 FF
+
 1
+
 5
+
 FF
+
 1
+
 6
+
 FF
+
 2
+
 6
+
 FF
+
 3
+
 6
+
 FF
+
 0
+
 The pairs of nodes that are to be calculated are (1, 3), (1, 4), (1,5), (1, 6), (2, 6) and (3, 6).
 
 Output.dat format
 3.0
+
 1.0
+
 4.0
+
 5.0
+
 3.0
+
 FFFF
+
 1.0
+
 1.0
+
 4.0
+
 FFFF
+
 2.0
+
 1.0
+
 4.0
+
 5.0
+
 FFFF
+
 4.0
+
 1.0
+
 4.0
+
 5.0
+
 6.0
+
 FFFF
+
 5.0
+
 2.0
+
 4.0
+
 5.0
+
 6.0
+
 FFFF
+
 3.0
+
 3.0
+
 5.0
+
 6.0
+
 FFFF
+
 0
+
 The above means that the shortest distance between 1 and 3 is 3 and the path is 1-4-5-3.
 And so on.
