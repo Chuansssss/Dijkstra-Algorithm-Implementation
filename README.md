@@ -19,6 +19,7 @@ d. Use FFFF to indicate the end of a set of input and 0 to represent the end of 
 
 ## Example of Graph.dat, Input.dat and Output.dat
 Graph.dat format
+
 6
 
 102235415060
