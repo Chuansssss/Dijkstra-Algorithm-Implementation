@@ -1,7 +1,6 @@
 # 4/10/2017 JcShang
 # @USC EE555
 
-import pandas as pd 
 import sys
 import re as re
 import numpy as py
@@ -64,10 +63,11 @@ sinks = py.array(sinks)
 
 num_pair = 0
 
-#create the output.dat file if not existing
+# create the output.dat file if not existing
+# file path may need to be changed on different hosts or systems
 f = open('/Users/JcShang/Desktop/Output.dat', 'w+')
 
-#start the Dijkstra's for each pair of source and sinik
+# start the Dijkstra's for each pair of source and sinik
 while (num_pair != len(sources)):
 	source = int(sources[num_pair]) - 1
 	sink = int(sinks[num_pair]) - 1
@@ -81,7 +81,7 @@ while (num_pair != len(sources)):
 		minDis = 999
 		for i in visited:
 			for j in range(0, num_node):
-				#igore this node if already in the visited array since Dijkstra does not update previous nodes
+				# igore this node if already in the visited array since Dijkstra does not update previous nodes
 				if j not in visited: 
 					if dis[int(i)] + result[int(i)][int(j)] < minDis and result[int(i)][int(j)] > 0:
 						minDis = dis[int(i)] + result[int(i)][int(j)]
@@ -93,7 +93,7 @@ while (num_pair != len(sources)):
 		if sink in visited:
 			break
 
-	#back track the shortest path from sink to source
+	# back track the shortest path from sink to source
 	path = py.array([])
 	path = py.append(path, [sink], axis = 0)
 	while source not in path:
@@ -101,7 +101,7 @@ while (num_pair != len(sources)):
 
 	f.write(str(dis[sink]) + '\n') 
 
-	#output the path in reverse order of the path array
+	# output the path in reverse order of the path array
 	pointer = len(path) - 1
 	while (pointer >= 0):
 		f.write(str(path[-1] + 1) + '\n')
@@ -109,10 +109,10 @@ while (num_pair != len(sources)):
 		pointer -= 1
 	f.write('FFFF' + '\n')
 
-	#algorithm finishes for the current pair of nodes
+	# algorithm finishes for the current pair of nodes
 	num_pair += 1
 
-#output the finishing tag in the output.dat file
+# output the finishing tag in the output.dat file
 f.write('0' + '\n')
 
 
