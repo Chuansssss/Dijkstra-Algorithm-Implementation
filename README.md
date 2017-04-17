@@ -3,18 +3,27 @@ This is a mini program that implements the Dijkstra algorithm on non-negative gr
 # Format of Graph, Input and Output
 ## Graph.dat
 The structure of the graph is described ini the Graph.dat file. In this file you need to specify the following:
+
 a. Number of Vertices
+
 b. A weighted graph representedn in the form of 'adjacent list'
+
 c. For each vertex, you need to keep a list of their weights (weights range from 0 to 9 for simplicity). Aweight of 0 means there is no edge between the two vertices.
 ## Input.dat
 The pair of nodes you want to calculate are listed in this file. In this file you need to specify the following:
+
 a. Multiple sets of 'source and destination' vertices
+
 b. use FF to indicate the end of a set of source and destination pair and a 0 to represent the end of all input sets
 ## Output.dat
 The shortest distance and the path are listed for each pair of nodes. For each set of input,
+
 a. Write out the weighted path length followed by
+
 b. Vertices of the entire 'shortest path' from source to destination
+
 c. If there are multiple paths with the same weighted shortest path length choose the one with the minimum number of hops
+
 d. Use FFFF to indicate the end of a set of input and 0 to represent the end of all inputs.
 
 # Example of Graph.dat, Input.dat and Output.dat
